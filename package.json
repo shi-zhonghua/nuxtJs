@@ -1,0 +1,23 @@
+{
+  "name": "nuxtProject",
+  "version": "1.0.0",
+  "description": "My supreme Nuxt.js project",
+  "author": "shi-zhonghua",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "element-ui": "^2.4.11"
+  },
+  "devDependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "nodemon": "^1.18.9"
+  }
+}
