@@ -1,14 +1,17 @@
 <template>
   <div>
     <menuNav/>
-    <nuxt />
+    <nuxt style="padding-bottom:50px;"/>
+    <footers/>
   </div>
 </template>
 <script>
 import menuNav from './menu.vue'
+import footers from './footer.vue'
 export default {
   components:{
-    menuNav
+    menuNav,
+    footers
   }
 }
 
