@@ -1,13 +1,23 @@
 <template>
   <div class="menu">
     <p><img src="~/assets/img/icon-log.png" /></p>
-      <nuxt-link to="/" class="li">首页</nuxt-link>
-      <nuxt-link to="/product" class="li">产品</nuxt-link>
+      
+      <nuxt-link class="li" v-for="item in menus" :key="item.name"  :to="item.router">{{item.name}}</nuxt-link>
   </div>
 </template>
 <script>
 export default {
-  
+  data() {
+    return {
+      menus: [
+        { name: '首页', router: '/' },
+        { name: '产品', router: '/product' },
+        { name: '用户', router: '/user' },
+
+      ]
+    }
+  }
+
 }
 
 </script>
@@ -37,6 +47,7 @@ export default {
     list-style: none;
     margin-right: 20px;
     text-decoration: none;
+    color: #000;
 
   }
 

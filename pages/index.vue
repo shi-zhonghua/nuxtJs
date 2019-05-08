@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    {{title}}
-    <li v-for="user in users">
-      {{user.title}}
-    </li>
+    <el-table :data="users" style="width: 100%">
+       <el-table-column prop="id" label="ID" width="80">
+      </el-table-column>
+      <el-table-column prop="title" label="标题" >
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 <script>
@@ -13,8 +15,7 @@ import axios from 'axios'
 export default {
   asyncData(context, callback) {
     axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
-      // console.log(res);
-      callback(null, { users: res.data })
+      callback(null, { users: res.data.slice(0, 20) })
     })
   },
 
@@ -23,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: '首页'
+      title: '首页',
     }
   },
   // 修改浏览器的title  hid 是唯一标识
