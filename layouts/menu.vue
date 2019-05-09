@@ -13,6 +13,8 @@ export default {
         { name: '首页', router: '/' },
         { name: '产品', router: '/product' },
         { name: '用户', router: '/user' },
+        { name: 'Vuex', router: '/store' },
+        { name: '关于我们', router: '/about' },
 
       ]
     }

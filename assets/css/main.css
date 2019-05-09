@@ -1,6 +1,23 @@
+/*全局页面过渡效果*/
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
 .page-enter, .page-leave-active {
   opacity: 0;
 }
+
+/*针对单个页面添加过渡效果*/
+/*.test-enter-active, .test-leave-active {
+transition: opacity .5s;
+}
+.test-enter, .test-leave-active {
+opacity: 0;
+}
+
+在指定的页面添加
+
+export default {
+transition: 'test'
+}
+
+*/
