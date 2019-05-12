@@ -14,7 +14,7 @@ export default {
         { name: '产品', router: '/product' },
         { name: '用户', router: '/user' },
         { name: 'Vuex', router: '/store' },
-        { name: '关于我们', router: '/about' },
+        { name: 'users', router: '/users' }
 
       ]
     }

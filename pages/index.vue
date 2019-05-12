@@ -10,6 +10,7 @@
 </template>
 <script>
 // import Logo from '~/components/Logo.vue'
+
 import axios from 'axios'
 
 export default {

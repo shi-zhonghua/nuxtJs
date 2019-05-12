@@ -19,13 +19,15 @@ export default {
       ],
     }
   },
+
   methods:{
   	add(){
   		this.$store.dispatch('incrementMutations')
   	},
   	reduction(){
   		this.$store.dispatch('reductionMutations')
-  	}
+  	},
+    
   }
 }
 

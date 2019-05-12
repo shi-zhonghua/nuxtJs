@@ -1,6 +1,5 @@
 <template>
 	<div>
-		关于我们主页
-		<nuxt-child/>
+		嵌套路由
 	</div>
 </template>

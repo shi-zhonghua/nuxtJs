@@ -10,6 +10,12 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "3330"
+    }
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
     "axios": "^0.18.0",
