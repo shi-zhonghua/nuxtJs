@@ -6,9 +6,9 @@
     <nuxt-child />
     <div class="search-condition">
       <div class="item">
-        <ul v-for="(key,value) in objArr" :key="value">
-            <li>{{value}}:</li>
-            <li v-for="(item,index) in key" @click="getSelect(value,index)" :class="{'active': index===currentIndex[value]}">{{item}}</li>
+        <ul v-for="(value,key) in objArr" :key="key">
+            <li>{{key}}:</li>
+            <li v-for="(item,index) in value" @click="getSelect(key,index)" :class="{'active': index===currentIndex[key]}">{{item}}</li>
         </ul>
       </div>
     </div>
@@ -17,6 +17,7 @@
 <script>
 import usersIndex from './users/index.vue'
 export default {
+  scrollToTop: true,
   components: {
     usersIndex
   },
@@ -42,10 +43,10 @@ export default {
     gernerateId: function(index) {
       return "person_" + index
     },
-    getSelect(value, index) {
-      console.log(value);
+    getSelect(key, index) {
+      console.log(key);
       console.log(index);
-      this.currentIndex[value] = index;
+      this.currentIndex[key] = index;
     }
   }
 }
