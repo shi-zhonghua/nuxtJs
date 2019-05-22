@@ -1,82 +1,47 @@
 <template>
   <div>
-    <li v-for="(item,index) in userData" :key="index" :id="gernerateId(index)" :class="'users_'+index">
-      {{item.label}}
+    <li v-for="(item,index) in info" :key="index" @click="handeClick(item)">
+      <span>userId:{{item.userId}}</span>
+      <span>title:{{item.title}}</span>
     </li>
-    <nuxt-child />
-    <div class="search-condition">
-      <div class="item">
-        <ul v-for="(value,key) in objArr" :key="key">
-            <li>{{key}}:</li>
-            <li v-for="(item,index) in value" @click="getSelect(key,index)" :class="{'active': index===currentIndex[key]}">{{item}}</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </template>
 <script>
-import usersIndex from './users/index.vue'
-export default {
-  scrollToTop: true,
-  components: {
-    usersIndex
-  },
-  data() {
-    return {
-      currentIndex: {
-        bigClass: 0,
-        bigClass1: 0
-      },
-      objArr: {
-        bigClass: ["不限", "sss"],
-        bigClass1: ["不限1", "sss1"],
-      },
+import axios from 'axios'
 
-      userData: [
-        { id: 1, label: '手机' },
-        { id: 2, label: '电脑' },
-        { id: 3, label: '平板' },
-      ]
+export default {
+  scrollToTop: true, // 进入当前页滚动条在原来位置
+  asyncData() { //请求
+    return axios({
+        method: 'get',
+        url: 'http://jsonplaceholder.typicode.com/posts'
+      })
+      .then(function(response) {
+        return { info: response.data };
+
+      })
+  },
+  head() {
+    return {
+      title: '用户列表'
     }
   },
   methods: {
-    gernerateId: function(index) {
-      return "person_" + index
-    },
-    getSelect(key, index) {
-      console.log(key);
-      console.log(index);
-      this.currentIndex[key] = index;
+    handeClick(item) {
+      this.$router.push({
+        path: '/usersId/' + item.id
+      })
     }
   }
 }
 
 </script>
 <style lang="less" scoped>
-.search-condition {
-  .item {
-    box-sizing: border-box;
-    padding-left: 40px;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    border-bottom: solid 1px #ccc;
-    ul{
-      width:100%;
-      overflow: hidden;
-    }
-    li {
-      float: left;
-      font-size: 14px;
-      margin-right: 20px;
-      cursor: pointer;
-      list-style: none;
-
-      &.active {
-        color: #f0f;
-      }
-    }
-  }
+li {
+  line-height: 40px;
+  border-bottom: solid 1px #ccc;
+  list-style: none;
+  padding-left:30px;
 }
 
 </style>
