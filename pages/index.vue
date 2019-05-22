@@ -12,6 +12,8 @@
 // import Logo from '~/components/Logo.vue'
 
 import axios from 'axios'
+// import axios from '~/plugins/axios'
+
 
 export default {
   asyncData(context, callback) {

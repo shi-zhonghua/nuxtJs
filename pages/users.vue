@@ -1,8 +1,9 @@
 <template>
   <div>
-    <li v-for="(item,index) in info" :key="index" @click="handeClick(item)">
+    <li v-for="(item,index) in info" :key="index">
       <span>userId:{{item.userId}}</span>
       <span>title:{{item.title}}</span>
+      <label @click="handeClick(item)">id查询</label>
     </li>
   </div>
 </template>
@@ -14,7 +15,7 @@ export default {
   asyncData() { //请求
     return axios({
         method: 'get',
-        url: 'http://jsonplaceholder.typicode.com/posts'
+        url: 'https://jsonplaceholder.typicode.com/posts'
       })
       .then(function(response) {
         return { info: response.data };
@@ -31,7 +32,7 @@ export default {
       this.$router.push({
         path: '/usersId/' + item.id
       })
-    }
+    },
   }
 }
 
@@ -41,7 +42,12 @@ li {
   line-height: 40px;
   border-bottom: solid 1px #ccc;
   list-style: none;
-  padding-left:30px;
+  padding-left: 30px;
+
+  label {
+    background: #f0f;
+    margin-left: 20px;
+  }
 }
 
 </style>
