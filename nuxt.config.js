@@ -41,7 +41,9 @@ export default {
    */
   plugins: [
     // '@/plugins/element-ui'
-    { src: '@/plugins/element-ui', ssr: false }
+    { src: '~/plugins/element-ui', ssr: false },
+    { src: '~/plugins/lodash.js' },
+
   ],
 
   /*
