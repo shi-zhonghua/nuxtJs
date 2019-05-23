@@ -18,7 +18,7 @@ export default {
         url: 'https://jsonplaceholder.typicode.com/posts'
       })
       .then(function(response) {
-        return { info: response.data };
+        return { info: response.data.slice(0, 10) };
 
       })
   },
@@ -30,7 +30,7 @@ export default {
   methods: {
     handeClick(item) {
       this.$router.push({
-        path: '/usersId/' + item.id
+        path: '/usersDetail/' + item.id
       })
     },
   }

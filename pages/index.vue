@@ -18,7 +18,7 @@ import axios from 'axios'
 export default {
   asyncData(context, callback) {
     axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
-      callback(null, { users: res.data.slice(0, 20) })
+      callback(null, { users: res.data.slice(0, 10) })
     })
   },
 
