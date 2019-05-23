@@ -15,6 +15,7 @@ export default {
         { name: '用户', router: '/user' },
         { name: 'Vuex', router: '/store' },
         { name: 'users', router: '/users' },
+        { name: '滚动加载', router: '/scroll' }
 
       ]
     }
