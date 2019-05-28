@@ -1,28 +1,26 @@
 <template>
-  <div class="menu">
-    <p><img src="~/assets/img/icon-log.png" /></p>
-      
-      <nuxt-link class="li" v-for="item in menus" :key="item.name"  :to="item.router">{{item.name}}</nuxt-link>
-  </div>
+    <div class="menu">
+        <p><img src="~/assets/img/icon-log.png" /></p>
+
+        <nuxt-link class="li" v-for="item in menus" :key="item.name" :to="item.router">{{item.name}}</nuxt-link>
+    </div>
 </template>
 <script>
 export default {
   data() {
     return {
       menus: [
-        { name: '首页', router: '/' },
-        { name: '产品', router: '/product' },
-        { name: '用户', router: '/user' },
-        { name: 'Vuex', router: '/store' },
-        { name: 'users', router: '/users' },
-        { name: '滚动加载', router: '/scroll' }
-
+        { name: "首页", router: "/" },
+        { name: "产品", router: "/product" },
+        { name: "用户", router: "/user" },
+        { name: "Vuex", router: "/store" },
+        { name: "users", router: "/users" },
+        { name: "滚动加载", router: "/scroll" },
+        { name: "sum", router: "/summeny" }
       ]
-    }
+    };
   }
-
-}
-
+};
 </script>
 <style lang="less" scoped>
 .menu {
@@ -51,13 +49,11 @@ export default {
     margin-right: 20px;
     text-decoration: none;
     color: #000;
-
   }
 
   // 导航默认字体颜色
   .nuxt-link-active {
     color: #000;
-
   }
 
   // 导航选中颜色
@@ -65,5 +61,4 @@ export default {
     color: blue;
   }
 }
-
 </style>
