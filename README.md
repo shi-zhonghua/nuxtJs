@@ -58,5 +58,30 @@ package.json 文件
    该目录名为Nuxt.js保留的，不可更改
 
 ```
+## 骨架屏使用
+```
+安装： npm install vue-content-loader --save
+单组件中引入
+import { ContentLoader } from 'vue-content-loader'
 
+内置骨架
+import {
+  ContentLoader,
+  FacebookLoader,
+  CodeLoader,
+  BulletListLoader,
+  InstagramLoader,
+  ListLoader
+} from 'vue-content-loader'
+
+使用方法
+<ContentLoader>
+  <rect x="0" y="0" rx="3" ry="3" width="250" height="10" />
+  <rect x="20" y="20" rx="3" ry="3" width="220" height="10" />
+  <rect x="20" y="40" rx="3" ry="3" width="170" height="10" />
+  <rect x="0" y="60" rx="3" ry="3" width="250" height="10" />
+  <rect x="20" y="80" rx="3" ry="3" width="200" height="10" />
+  <rect x="20" y="100" rx="3" ry="3" width="80" height="10" />
+</ContentLoader>
+```
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
