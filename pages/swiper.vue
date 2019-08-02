@@ -14,6 +14,8 @@
     </div>
 </template>
 <script>
+import "swiper/dist/css/swiper.css";
+import Swiper from "swiper";
 export default {
   data() {
     return {
@@ -50,14 +52,7 @@ export default {
   height: 300px;
   width: 300px;
   .swiper-slide {
-    // text-align: center;
-    // font-size: 38px;
-    // font-weight: 700;
-    // background-color: #eee;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // color: #000;
+   overflow: hidden;
   }
   .swiper-pagination {
     > .swiper-pagination-bullet {
