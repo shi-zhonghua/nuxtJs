@@ -3,12 +3,12 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <video id="video" height="160" src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls="controls" playsinline="" webkit-playsinline="" poster="http://imsapi.yueqizhixiang.com/uploads/images/leqizhixiang/shangjiadianpu/zixun2/1564392065070.jpg">
+                    <video id="video" height="160" style="width:100%" src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls="controls" playsinline="" webkit-playsinline="" poster="http://imsapi.yueqizhixiang.com/uploads/images/leqizhixiang/shangjiadianpu/zixun2/1564392065070.jpg">
                         您的浏览器不支持 video 标签。
                     </video>
                     <div>
-                        <button @click="stop">暂停</button>
-                        <button @click="start">开始</button>
+                        <button @click="pause">暂停</button>
+                        <button @click="play">开始</button>
                     </div>
                 </div>
                 <div class="swiper-slide" v-for="(item,index) in 5">
