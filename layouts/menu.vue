@@ -16,7 +16,8 @@ export default {
         { name: "Vuex", router: "/store" },
         { name: "users", router: "/users" },
         { name: "滚动加载", router: "/scroll" },
-        { name: "sum", router: "/summeny" }
+        { name: "sum", router: "/summeny" },
+        { name: "swiper", router: "/swiper" }
       ]
     };
   }
