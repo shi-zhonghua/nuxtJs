@@ -17,7 +17,8 @@ export default {
         { name: "users", router: "/users" },
         { name: "滚动加载", router: "/scroll" },
         { name: "sum", router: "/summeny" },
-        { name: "swiper", router: "/swiper" }
+        { name: "swiper", router: "/swiper" },
+        { name: "swiper2", router: "/swiper2" }
       ]
     };
   }
