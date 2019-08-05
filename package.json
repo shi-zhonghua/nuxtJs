@@ -1,33 +1,33 @@
 {
-  "name": "nuxtProject",
-  "version": "1.0.0",
-  "description": "My supreme Nuxt.js project",
-  "author": "shi-zhonghua",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "config": {
-    "nuxt": {
-      "host": "localhost",
-      "port": "3330"
+    "name": "nuxtProject",
+    "version": "1.0.0",
+    "description": "My supreme Nuxt.js project",
+    "author": "shi-zhonghua",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "config": {
+        "nuxt": {
+            "host": "localhost",
+            "port": "3330"
+        }
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.4.1",
+        "axios": "^0.18.0",
+        "cross-env": "^5.2.0",
+        "element-ui": "^2.4.11",
+        "nuxt": "^2.4.0",
+        "vue-awesome-swiper": "^3.1.3",
+        "vue-content-loader": "^0.2.2"
+    },
+    "devDependencies": {
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "nodemon": "^1.18.9"
     }
-  },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.4.1",
-    "axios": "^0.18.0",
-    "cross-env": "^5.2.0",
-    "element-ui": "^2.4.11",
-    "nuxt": "^2.4.0",
-    "vue-awesome-swiper": "^3.1.3",
-    "vue-content-loader": "^0.2.2"
-  },
-  "devDependencies": {
-    "less": "^3.9.0",
-    "less-loader": "^5.0.0",
-    "nodemon": "^1.18.9"
-  }
 }
