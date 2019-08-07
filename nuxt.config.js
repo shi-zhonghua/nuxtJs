@@ -34,6 +34,7 @@ export default {
     css: [
         'element-ui/lib/theme-chalk/index.css',
         'assets/css/main.css',
+        'vue-photo-preview/dist/skin.css',
         { src: "swiper/dist/css/swiper.css" }
     ],
 
@@ -45,6 +46,7 @@ export default {
         { src: '~/plugins/element-ui', ssr: false },
         { src: '~/plugins/lodash.js' },
         { src: "~/plugins/vue-swiper.js", ssr: false },
+        { src: "~/plugins/photo.js", ssr: false },
 
 
     ],

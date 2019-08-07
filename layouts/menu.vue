@@ -18,7 +18,8 @@ export default {
         { name: "滚动加载", router: "/scroll" },
         { name: "sum", router: "/summeny" },
         { name: "swiper", router: "/swiper" },
-        { name: "swiper2", router: "/swiper2" }
+        { name: "swiper2", router: "/swiper2" },
+        { name: "photo", router: "/photo" }
       ]
     };
   }
